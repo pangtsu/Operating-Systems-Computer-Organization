@@ -5,16 +5,6 @@
 
 
 
-
-
-// for # of digits of numbers:
-// no need to malloc, create a maximum of 10 with '-'
-// Use a for loop to keep getting it, set up if statements to prevent getting redundant ones. 
-// Can be solved afterwards
-
-
-
-// WHAT ARE NEW THIS TIME: 
 // integers might be positive, negative, or 0. 
 // addition, subtraction, multiplication, division, and mod 
 // on the same line, its always mixture of +/-. * and / and %, and assignment (x=1), so
@@ -33,11 +23,6 @@
 // NO ADJACENT NUMBERS ON THE TWO SIDES OF OPERATOR (I.E., 1+2, 1-2, 3/3, 2*2);
 
 
-// ALL DIFFERENT CASES:
-// ADDITION/SUBTRACTION:  just like the previous one
-
-
-
 /* MULTIPLICATION:
 - when multiplying with variable, do it in the mul, mflo way.
 - when multiplying with positive constant/negative constant, use sll. For neg, replace the last one
@@ -53,13 +38,12 @@ move $t0,$s0
 sub $s1,$zero,$t0
 
 
-   DIVISION:
+DIVISION:
 - when dividing with a variable, do it in div, mflo way
 - if divisor is constant, power of 2, test the first operand using bltz. 
    - If first operand negative, branch to div, mflo,  
    - if first operand positive, use srl, and then under the condition of 2nd operand neg, 
      // use sub $s1, $zero, $s1 after srl.
-
 - if divisor is NOT power of 2, do it div and mflo way no matter 2nd operand pos or neg
 
 bash$ cat example5.src
